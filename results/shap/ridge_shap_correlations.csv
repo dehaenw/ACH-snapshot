@@ -1,0 +1,13 @@
+Features,Compound,Pearson_r,N_features,Sign_agreement_fraction,Explainer
+Desc,meta-Cl/Et,-0.035762170918718916,40,0.575,LinearExplainer (interventional)
+Desc,para-Cl/Et,-0.0903089492299527,40,0.575,LinearExplainer (interventional)
+Desc,meta-Cl/Pr,0.062244963255073185,40,0.575,LinearExplainer (interventional)
+Desc,para-Cl/Pr,0.01667104315639817,40,0.575,LinearExplainer (interventional)
+FP,meta-Cl/Et,0.04488509316291646,40,0.425,LinearExplainer (interventional)
+FP,para-Cl/Et,0.24052739665879772,40,0.375,LinearExplainer (interventional)
+FP,meta-Cl/Pr,0.06907990482776011,40,0.45,LinearExplainer (interventional)
+FP,para-Cl/Pr,0.2576968249850769,40,0.4,LinearExplainer (interventional)
+FCFP,meta-Cl/Et,-0.027399139890491656,40,0.425,LinearExplainer (interventional)
+FCFP,para-Cl/Et,-0.048527399817397995,40,0.425,LinearExplainer (interventional)
+FCFP,meta-Cl/Pr,0.06286566443784934,40,0.45,LinearExplainer (interventional)
+FCFP,para-Cl/Pr,0.044391719215465614,40,0.45,LinearExplainer (interventional)

@@ -1,0 +1,120 @@
+{
+  "MAE": 0.6849529744512427,
+  "R2": 0.19120223485300336,
+  "MAE_cliff": 0.949114897954339,
+  "R2_cliff": 0.1708542353129202,
+  "directionality_pct": 50.191570881226056,
+  "n_cliff_pairs": 261,
+  "Endpoint": "pki",
+  "Model": "ChemProp",
+  "Features": "Graph",
+  "Repeat_seed": 43,
+  "fold_seed": 42,
+  "n_folds": 5,
+  "n_rows": 511,
+  "n_cliff_compounds": 196,
+  "SALI_threshold": 5.5,
+  "epochs": 40,
+  "seconds": 28.358566493261606,
+  "folds": [
+    {
+      "fold": 0,
+      "fold_seed": 4300,
+      "n_train": 408,
+      "n_valid": 103,
+      "MAE": 0.6142038457119275,
+      "R2": 0.20262831553853122,
+      "seconds": 5.621200016699731
+    },
+    {
+      "fold": 1,
+      "fold_seed": 4301,
+      "n_train": 409,
+      "n_valid": 102,
+      "MAE": 0.7293783590832899,
+      "R2": -0.09017487972140659,
+      "seconds": 5.73856935184449
+    },
+    {
+      "fold": 2,
+      "fold_seed": 4302,
+      "n_train": 409,
+      "n_valid": 102,
+      "MAE": 0.6308860979382018,
+      "R2": 0.276744786756714,
+      "seconds": 5.405963351018727
+    },
+    {
+      "fold": 3,
+      "fold_seed": 4303,
+      "n_train": 409,
+      "n_valid": 102,
+      "MAE": 0.6577192894050014,
+      "R2": 0.26149456629789536,
+      "seconds": 5.385978782083839
+    },
+    {
+      "fold": 4,
+      "fold_seed": 4304,
+      "n_train": 409,
+      "n_valid": 102,
+      "MAE": 0.7932708990270024,
+      "R2": 0.23209212000733837,
+      "seconds": 5.6514439499005675
+    }
+  ],
+  "model_audit": {
+    "checkpoint": null,
+    "checkpoint_sha256": null,
+    "hyper_parameters": {
+      "d_v": 72,
+      "d_e": 14,
+      "d_h": 300,
+      "bias": false,
+      "depth": 3,
+      "dropout": 0.0,
+      "activation": "relu",
+      "undirected": false,
+      "d_vd": null,
+      "V_d_transform": null,
+      "graph_transform": null,
+      "cls": "<class 'chemprop.nn.message_passing.base.BondMessagePassing'>"
+    },
+    "state_dict_keys": null,
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "encoder_output_dim": 300,
+    "initialization": "random initialization",
+    "all_parameters_trainable": true,
+    "n_parameters": 318301,
+    "predictor_hyper_parameters": {
+      "n_tasks": 1,
+      "input_dim": 300,
+      "hidden_dim": 300,
+      "n_layers": 1,
+      "dropout": 0.0,
+      "task_weights": null,
+      "threshold": null,
+      "criterion": null,
+      "output_transform": "UnscaleTransform()",
+      "activation": "relu",
+      "cls": "<class 'chemprop.nn.predictors.RegressionFFN'>"
+    },
+    "mpnn_hyper_parameters": {
+      "batch_norm": false,
+      "warmup_epochs": 2,
+      "init_lr": 0.0001,
+      "max_lr": 0.001,
+      "final_lr": 0.0001
+    },
+    "seed": 4300,
+    "epochs": 40,
+    "batch_size": 64,
+    "num_workers": 0,
+    "shuffle": true,
+    "dataloader_seed": 4300,
+    "target_mean": 6.482412855421386,
+    "target_scale": 0.9776997792513921,
+    "accelerator": "gpu"
+  }
+}

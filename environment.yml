@@ -1,0 +1,42 @@
+name: nmda-qsar-final
+
+# Reproducible Linux x86-64 environment for the final measured-IC50 release.
+# The NVIDIA host driver is external to Conda. On Linux, the pinned PyTorch
+# wheel supplies its CUDA 12.8 user-space runtime; CPU-only analyses also work.
+channels:
+  - conda-forge
+  - nodefaults
+
+dependencies:
+  - python=3.12.12
+  - pip=25.0.1
+  - pip:
+      # Numerical and tabular stack used for the final analyses
+      - numpy==2.2.6
+      - pandas==2.3.3
+      - scipy==1.15.3
+      - scikit-learn==1.4.2
+
+      # Cheminformatics and conventional QSAR models
+      - rdkit==2025.9.3
+      - xgboost==3.2.0
+      - lightgbm==4.6.0
+
+      # Statistics, interpretation, optimization, and visualization
+      - shap==0.51.0
+      - statsmodels==0.14.6
+      - optuna==4.8.0
+      - matplotlib==3.10.8
+      - seaborn==0.13.2
+      - pillow==12.1.0
+      - tqdm==4.67.1
+
+      # UMAP is used only for Figure 2. Version 0.5.7 is intentionally pinned
+      # because it is compatible with the analysis-critical sklearn 1.4.2.
+      - umap-learn==0.5.7
+
+      # Foundation and graph models
+      - torch==2.9.1
+      - lightning==2.6.0
+      - chemprop==2.2.3
+      - tabpfn==2.1.0

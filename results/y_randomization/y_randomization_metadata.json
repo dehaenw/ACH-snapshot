@@ -1,0 +1,37 @@
+{
+  "endpoint": "pIC50",
+  "input": "/home/wim/Documents/ChatGPT/NMDApaper/nmda_qsar_results_release_final_ic50/data/pic50_clean.csv",
+  "n_records": 332,
+  "folds": "KFold(n_splits=5, shuffle=True, random_state=42), unchanged from primary workflow",
+  "permutation_seed": 20261125,
+  "n_permutations": 100,
+  "procedure": "The response vector was permuted across records before fitting. Features, folds, preprocessing and fixed model settings were unchanged; models were scored against the corresponding permuted validation labels.",
+  "empirical_p_definition": "(1 + count(null R2 >= observed R2)) / (1 + n_permutations)",
+  "configurations": [
+    {
+      "model": "XGB",
+      "features": "Desc",
+      "selection_reason": "descriptor representative"
+    },
+    {
+      "model": "RF",
+      "features": "FP",
+      "selection_reason": "highest overall fixed-fold pIC50 R2"
+    },
+    {
+      "model": "SVM",
+      "features": "FP",
+      "selection_reason": "highest cliff-subset pIC50 R2"
+    },
+    {
+      "model": "XGB",
+      "features": "FCFP",
+      "selection_reason": "highest FCFP cliff-subset pIC50 R2"
+    },
+    {
+      "model": "TabPFN",
+      "features": "FCFP",
+      "selection_reason": "tabular foundation-model representative"
+    }
+  ]
+}

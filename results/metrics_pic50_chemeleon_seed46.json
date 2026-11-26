@@ -1,0 +1,182 @@
+{
+  "MAE": 0.5952994642480264,
+  "R2": 0.28064067437274354,
+  "MAE_cliff": 0.7463482116621473,
+  "R2_cliff": 0.3071416422432709,
+  "directionality_pct": 80.0,
+  "n_cliff_pairs": 140,
+  "Endpoint": "pic50",
+  "Model": "ChemProp+CheMeleon",
+  "Features": "Graph",
+  "Repeat_seed": 46,
+  "fold_seed": 42,
+  "n_folds": 5,
+  "n_rows": 332,
+  "n_cliff_compounds": 95,
+  "SALI_threshold": 5.5,
+  "epochs": 40,
+  "seconds": 87.65671288315207,
+  "folds": [
+    {
+      "fold": 0,
+      "fold_seed": 4600,
+      "n_train": 265,
+      "n_valid": 67,
+      "MAE": 0.5132896676099267,
+      "R2": 0.48621656916316125,
+      "seconds": 17.358319338876754
+    },
+    {
+      "fold": 1,
+      "fold_seed": 4601,
+      "n_train": 265,
+      "n_valid": 67,
+      "MAE": 0.7567144414739428,
+      "R2": -0.11147939087870817,
+      "seconds": 17.081808493938297
+    },
+    {
+      "fold": 2,
+      "fold_seed": 4602,
+      "n_train": 266,
+      "n_valid": 66,
+      "MAE": 0.5541765576836003,
+      "R2": 0.3787224344455621,
+      "seconds": 17.32467706594616
+    },
+    {
+      "fold": 3,
+      "fold_seed": 4603,
+      "n_train": 266,
+      "n_valid": 66,
+      "MAE": 0.5693486028322867,
+      "R2": 0.3810108607981104,
+      "seconds": 17.475763310212642
+    },
+    {
+      "fold": 4,
+      "fold_seed": 4604,
+      "n_train": 266,
+      "n_valid": 66,
+      "MAE": 0.5817649428435905,
+      "R2": 0.2034152238948157,
+      "seconds": 17.85889147594571
+    }
+  ],
+  "model_audit": {
+    "checkpoint": "/home/wim/Documents/ChatGPT/NMDApaper/nmda_qsar_results_release_final_ic50/checkpoints/chemeleon_mp.pt",
+    "checkpoint_sha256": "c376624d3407204e780a0ed13a9ac097cc9bb1c13ef89cdbc633c1715c183651",
+    "hyper_parameters": {
+      "d_v": 72,
+      "d_e": 14,
+      "d_h": 2048,
+      "bias": false,
+      "depth": 6,
+      "dropout": 0.0,
+      "activation": "relu",
+      "undirected": false,
+      "d_vd": null,
+      "V_d_transform": null,
+      "graph_transform": null
+    },
+    "state_dict_keys": [
+      "W_i.weight",
+      "W_h.weight",
+      "W_o.weight",
+      "W_o.bias"
+    ],
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "encoder_output_dim": 2048,
+    "initialization": "CheMeleon checkpoint; strict encoder load",
+    "all_parameters_trainable": true,
+    "n_parameters": 9329241,
+    "predictor_hyper_parameters": {
+      "n_tasks": 1,
+      "input_dim": 2048,
+      "hidden_dim": 300,
+      "n_layers": 1,
+      "dropout": 0.0,
+      "task_weights": null,
+      "threshold": null,
+      "criterion": null,
+      "output_transform": "UnscaleTransform()",
+      "activation": "relu",
+      "cls": "<class 'chemprop.nn.predictors.RegressionFFN'>"
+    },
+    "mpnn_hyper_parameters": {
+      "batch_norm": false,
+      "warmup_epochs": 2,
+      "init_lr": 0.0001,
+      "max_lr": 0.001,
+      "final_lr": 0.0001
+    },
+    "seed": 4600,
+    "epochs": 40,
+    "batch_size": 64,
+    "num_workers": 0,
+    "shuffle": true,
+    "dataloader_seed": 4600,
+    "target_mean": 6.540245153255002,
+    "target_scale": 0.9954697113218456,
+    "accelerator": "gpu"
+  },
+  "full_fit_audit": {
+    "checkpoint": "/home/wim/Documents/ChatGPT/NMDApaper/nmda_qsar_results_release_final_ic50/checkpoints/chemeleon_mp.pt",
+    "checkpoint_sha256": "c376624d3407204e780a0ed13a9ac097cc9bb1c13ef89cdbc633c1715c183651",
+    "hyper_parameters": {
+      "d_v": 72,
+      "d_e": 14,
+      "d_h": 2048,
+      "bias": false,
+      "depth": 6,
+      "dropout": 0.0,
+      "activation": "relu",
+      "undirected": false,
+      "d_vd": null,
+      "V_d_transform": null,
+      "graph_transform": null
+    },
+    "state_dict_keys": [
+      "W_i.weight",
+      "W_h.weight",
+      "W_o.weight",
+      "W_o.bias"
+    ],
+    "missing_keys": [],
+    "unexpected_keys": [],
+    "encoder_output_dim": 2048,
+    "initialization": "CheMeleon checkpoint; strict encoder load",
+    "all_parameters_trainable": true,
+    "n_parameters": 9329241,
+    "predictor_hyper_parameters": {
+      "n_tasks": 1,
+      "input_dim": 2048,
+      "hidden_dim": 300,
+      "n_layers": 1,
+      "dropout": 0.0,
+      "task_weights": null,
+      "threshold": null,
+      "criterion": null,
+      "output_transform": "UnscaleTransform()",
+      "activation": "relu",
+      "cls": "<class 'chemprop.nn.predictors.RegressionFFN'>"
+    },
+    "mpnn_hyper_parameters": {
+      "batch_norm": false,
+      "warmup_epochs": 2,
+      "init_lr": 0.0001,
+      "max_lr": 0.001,
+      "final_lr": 0.0001
+    },
+    "seed": 4699,
+    "epochs": 40,
+    "batch_size": 64,
+    "num_workers": 0,
+    "shuffle": true,
+    "dataloader_seed": 4699,
+    "target_mean": 6.529965984037204,
+    "target_scale": 0.9873989415894749,
+    "accelerator": "gpu"
+  }
+}

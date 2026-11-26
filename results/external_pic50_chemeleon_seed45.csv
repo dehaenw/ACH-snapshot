@@ -1,0 +1,5 @@
+Model,Features,Repeat_seed,training_seed,compound,smiles,observed_pIC50,predicted_pIC50
+ChemProp+CheMeleon,Graph,45,4599,meta-Cl/Et,c1ccc(Cl)cc1C1(NCC)C(=O)CCCC1,6.2557368898022,7.336666
+ChemProp+CheMeleon,Graph,45,4599,para-Cl/Et,c1cc(Cl)ccc1C1(NCC)C(=O)CCCC1,4.68501598061177,7.21193
+ChemProp+CheMeleon,Graph,45,4599,meta-Cl/Pr,c1ccc(Cl)cc1C1(NCCC)C(=O)CCCC1,6.10884566570212,7.3877707
+ChemProp+CheMeleon,Graph,45,4599,para-Cl/Pr,c1cc(Cl)ccc1C1(NCCC)C(=O)CCCC1,4.94999831292921,7.210134
